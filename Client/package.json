@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "NODE_ENV='development' node server.js",
     "build": "next build && next export",
-    "start": "next start",
-    "start-server": "next start & node server.js"
+    "start": "next start"
   },
   "dependencies": {
     "@types/styled-components": "^5.1.14",

@@ -60,7 +60,7 @@ const Product = () => {
       <ImageContainer>
         <img src="../Products/3.jpeg" alt="Picture of the author" />
         <ImageTitle>
-          <h4>2021 Apple 12.9-inch iPad Pro (Wi‑Fi, 256GB) - Space Gray</h4>
+          <h4>Nunc ullamcorper facilisis ligula vel facilisis. Pellentesque</h4>
           <AiOutlineHeart size="30" color="#FF6347" />
         </ImageTitle>
       </ImageContainer>
