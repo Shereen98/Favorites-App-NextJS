@@ -14,10 +14,7 @@ export const getStaticProps = async () => {
 const Products = ({ products }) => {
   return (
     <div className={styles.container}>
-      {products.map((product) => (
-        // <div key={product.id}>{product.name}</div>
-        <Product product={product} />
-      ))}
+      {products && products.map((product) => <Product product={product} />)}
     </div>
   );
 };
