@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "name": "Jordan Zion 1",
+    "image": "https://images.footlocker.com/is/image/EBFL2/C4208601_a1?wid=500&hei=500&fmt=png-alpha",
+    "description": "Be a dominant force on the floor with the dynamic Jordan Zion 1. Inspired by Zion Williamson’s signature details, its lightweight Air Strobel footbed is sewn onto the upper for a super-cushiony ride. Repping his duality of humility and superhuman ability, these sneakers let you bring strength and support to your skills as you lay waste to the competition. Enabling you to move carefree with exceptional side-to-side stability, the Jordan Zion 1 adds a classic Jumpman edge to your court-ready rotation!",
+    "isLiked": false,
+    "numberOfLikes": 0,
+    "numberOfComments": 0,
+    "comments": {}
+  },
+  {
+    "id": "2",
+    "name": "Jordan Why Not Zero.4",
+    "image": "https://images.footlocker.com/is/image/EBFL2/Q4230102_a1?wid=500&hei=500&fmt=png-alpha",
+    "description": "Why not slip into one of the most comfortable and power-packed kicks? The Jordan Why Not Zero.4 sneakers are inspired by the superstar Russell Westbrook, perfectly capturing his skills and style on the court. Power-packed and performance-driven, these silhouettes support your feet as you perfect your crossovers, layups, and landings with ease. Get maximum responsiveness on and off the court as you step out in style in these durable and breathable super-kicks.",
+    "isLiked": false,
+    "numberOfLikes": 0,
+    "numberOfComments": 0,
+    "comments": {}
+  },
+  {
+    "id": "3",
+    "name": "Jordan Jumpman Crew T-Shirt",
+    "image": "https://images.footlocker.com/is/image/EBFL2/J0921687_a1?wid=500&hei=500&fmt=png-alpha",
+    "description": "Start your day with fresh Jordan style in the iconic Jumpman Crew T-Shirt.",
+    "isLiked": false,
+    "numberOfLikes": 0,
+    "numberOfComments": 0,
+    "comments": {}
+  },
+  {
+    "id": "4",
+    "name": "The North Face Shelbe Raschel Reversible Pullover",
+    "image": "https://images.footlocker.com/is/image/EBFL2/A4R7D11P_om1?wid=500&hei=500&fmt=png-alpha",
+    "description": "Double up on style with The North Face’s Shelbe Raschel Reversible Pullover.",
+    "isLiked": false,
+    "numberOfLikes": 0,
+    "numberOfComments": 0,
+    "comments": {}
+  },
+  {
+    "id": "5",
+    "name": "Under Armour Team ISO Chill Polo",
+    "image": "https://images.footlocker.com/is/image/EBFL2/60686400_om1?wid=500&hei=500&fmt=png-alpha",
+    "description": "The Under Armour Team ISO Chill Polo is designed to keep you calm and energized. Made with Iso-Chill fabric, it helps disperse body heat, maintaining a cool, soothing feel. Its sweat-wicking technology keeps you dry and comfortable on the hottest of days. A low-profile micro collar finishes it off with a simple, timeless style. ",
+    "isLiked": false,
+    "numberOfLikes": 0,
+    "numberOfComments": 0,
+    "comments": {}
+  },
+  {
+    "id": "6",
+    "name": "Nike Hoops Elite Pro Backpack",
+    "image": "https://images.footlocker.com/is/image/EBFL2/Q7282100_a1?wid=500&hei=500&fmt=png-alpha",
+    "description": "Calling athletes, students, commuters, and gym enthusiasts alike: the Nike Hoops Elite Pro Backpack has space for your electronics, wet and dry gear, a water bottle, and more. Practice, hit the gym, play a pick-up game and more with ease.",
+    "isLiked": false,
+    "numberOfLikes": 0,
+    "numberOfComments": 0,
+    "comments": {}
+  }
+]
