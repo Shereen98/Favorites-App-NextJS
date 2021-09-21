@@ -25,6 +25,7 @@ const ImageTitle = styled.div`
   padding: 5px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 
 const ProductDescription = styled.div`
@@ -54,13 +55,13 @@ const CommentWrapper = styled.div`
   }
 `;
 
-const Product = () => {
+const Product = ({ product }) => {
   return (
-    <Card>
+    <Card key={product.id}>
       <ImageContainer>
-        <img src="../Products/3.jpeg" alt="Picture of the author" />
+        <img src={product.image} alt="Picture of the author" />
         <ImageTitle>
-          <h4>Nunc ullamcorper facilisis ligula vel facilisis. Pellentesque</h4>
+          <h4>{product.name}</h4>
           <AiOutlineHeart size="30" color="#FF6347" />
         </ImageTitle>
       </ImageContainer>
@@ -70,12 +71,7 @@ const Product = () => {
           <p>32 Likes</p>
         </LikeWrapper>
         <DescriptionWrapper>
-          <p>
-            Nunc ullamcorper facilisis ligula vel facilisis. Pellentesque
-            venenatis sapien justo, vitae placerat libero luctus eu. Aliquam
-            tempus mauris nec leo fringilla maximus. Duis ac dui vel neque
-            viverra malesuada.
-          </p>
+          <p>{product.description}</p>
         </DescriptionWrapper>
         <CommentWrapper>
           <p>View 13 comments</p>
