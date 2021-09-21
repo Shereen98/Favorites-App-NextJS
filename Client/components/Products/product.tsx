@@ -5,8 +5,9 @@ const Card = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 100%;
-  padding: 25px 10px;
+  padding: 10px 10px;
   position: relative;
+  margin-bottom: 18px;
   img {
     width: 100%;
   }
@@ -14,6 +15,7 @@ const Card = styled.div`
 
 const ImageContainer = styled.div`
   position: relative;
+  background-color: #eeeeeead;
 `;
 const ImageTitle = styled.div`
   position: absolute;

@@ -1,5 +1,7 @@
+import { server } from "../config";
+
 export async function getFavoriteProducts() {
-  const response = await fetch("/api/favorites");
+  const response = await fetch(`${server}/api/favorites`);
   return await response.json();
 }
 
