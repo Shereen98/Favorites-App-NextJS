@@ -19,7 +19,6 @@ const router = express.Router();
 const favoriteProducts = {
   favProducts: [],
 };
-const favoriteProductList = favoriteProducts.favProducts;
 
 //Get products
 router.get("/products", (req, res) => {
@@ -70,7 +69,7 @@ router.post("/favorites/:id", (req, res) => {
 
 //Get favorite product list
 router.get("/favorites", (req, res) => {
-  return res.send({ favoriteProductList });
+  return res.send(favoriteProducts.favProducts);
 });
 
 //Delete favorite product
