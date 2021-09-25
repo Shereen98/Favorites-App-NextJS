@@ -13,7 +13,7 @@ const Main = styled.div`
   flex-direction: column;
 `;
 
-function Layout({ children }) {
+function Layout({ children }: any) {
   return (
     <Main>
       <Head>

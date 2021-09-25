@@ -3,6 +3,7 @@ import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 import Product from "../../components/Products/product";
 import { getAllProducts } from "../../services/productService";
+import { ProductInterface } from "../../interface/ProductInterface";
 
 export const getServerSideProps = async () => {
   const data = await getAllProducts();
@@ -11,10 +12,11 @@ export const getServerSideProps = async () => {
   };
 };
 
-const Products = ({ products }) => {
+const Products = ({ products }: any) => {
   return (
     <div className={styles.container}>
-      {products && products.map((product) => <Product product={product} />)}
+      {products &&
+        products.map((product: any) => <Product product={product} />)}
     </div>
   );
 };

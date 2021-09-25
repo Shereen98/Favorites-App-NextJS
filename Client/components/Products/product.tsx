@@ -4,10 +4,9 @@ import {
   addToFavorite,
   deleteFavorite,
 } from "../../services/favoriteProductService";
-import { toast, ToastContainer } from "react-nextjs-toast";
 import { useRouter } from "next/router";
-import { Component } from "react";
 import FavoriteButton from "../Favorites/favorite-button";
+import { ProductInterface } from "../../interface/ProductInterface";
 
 const Card = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -74,7 +73,7 @@ const FavButton = styled.button`
   border-width: 0;
 `;
 
-function Product({ product }) {
+function Product({ product }: ProductInterface) {
   const router = useRouter();
 
   const refreshData = () => {
@@ -87,7 +86,7 @@ function Product({ product }) {
     );
   };
 
-  async function submitFavorite(id, isLiked) {
+  async function submitFavorite(id: string, isLiked: boolean) {
     const data = isLiked ? await deleteFavorite(id) : await addToFavorite(id);
     refreshData();
   }
@@ -99,7 +98,9 @@ function Product({ product }) {
         <ImageTitle key={product.id}>
           <h4>{product.name}</h4>
           <FavButton
-            onClick={() => submitFavorite(product.id, product.isLiked)}
+            onClick={() =>
+              submitFavorite(product.id, product.isLiked as boolean)
+            }
           >
             <FavoriteButton state={product.isLiked} />
           </FavButton>

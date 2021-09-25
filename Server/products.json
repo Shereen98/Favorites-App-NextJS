@@ -7,7 +7,7 @@
     "isLiked": false,
     "numberOfLikes": 24,
     "numberOfComments": 6,
-    "comments": {}
+    "comments": []
   },
   {
     "id": "2",
@@ -17,7 +17,7 @@
     "isLiked": false,
     "numberOfLikes": 32,
     "numberOfComments": 2,
-    "comments": {}
+    "comments": []
   },
   {
     "id": "3",
@@ -27,7 +27,7 @@
     "isLiked": false,
     "numberOfLikes": 5,
     "numberOfComments": 12,
-    "comments": {}
+    "comments": []
   },
   {
     "id": "4",
@@ -37,7 +37,7 @@
     "isLiked": false,
     "numberOfLikes": 76,
     "numberOfComments": 13,
-    "comments": {}
+    "comments": []
   },
   {
     "id": "5",
@@ -47,7 +47,7 @@
     "isLiked": false,
     "numberOfLikes": 24,
     "numberOfComments": 7,
-    "comments": {}
+    "comments": []
   },
   {
     "id": "6",
@@ -57,6 +57,6 @@
     "isLiked": false,
     "numberOfLikes": 19,
     "numberOfComments": 5,
-    "comments": {}
+    "comments": []
   }
 ]

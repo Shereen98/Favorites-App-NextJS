@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { ProductInterface } from "../../interface/ProductInterface";
+import { useRouter } from "next/router";
+import { deleteFavorite } from "../../services/favoriteProductService";
 
 const Card = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -8,6 +11,7 @@ const Card = styled.div`
   padding: 10px 10px;
   position: relative;
   margin-bottom: 18px;
+  display: flex;
   img {
     width: 100%;
   }
@@ -15,19 +19,17 @@ const Card = styled.div`
 
 const ImageContainer = styled.div`
   position: relative;
+  width: 35%;
   background-color: #eeeeeead;
+  border-radius: 20px;
 `;
 const ImageTitle = styled.div`
-  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background: #c0c0c094;
   cursor: pointer;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 0px 5px;
+  width: 75%;
 `;
 
 const ProductDescription = styled.div`
@@ -36,6 +38,7 @@ const ProductDescription = styled.div`
 `;
 
 const LikeWrapper = styled.div`
+  top: 0;
   display: flex;
   align-items: center;
   p {
@@ -50,36 +53,41 @@ const DescriptionWrapper = styled.div`
   }
 `;
 
-const CommentWrapper = styled.div`
-  p {
-    color: #808080bf;
-    font-size: 10px;
-  }
-`;
+function Favorite({ product }: ProductInterface) {
+  const router = useRouter();
 
-const Favorite = ({ product }) => {
+  const refreshData = () => {
+    router.replace(
+      {
+        pathname: router.asPath,
+      },
+      undefined,
+      { scroll: false }
+    );
+  };
+
+  async function deleteFavoriteProduct(id: string) {
+    const data = await deleteFavorite(id);
+    refreshData();
+  }
+
   return (
     <Card key={product.id}>
       <ImageContainer>
         <img src={product.image} alt="Picture of the author" />
-        <ImageTitle>
-          <h4>{product.name}</h4>
-        </ImageTitle>
       </ImageContainer>
-      <ProductDescription>
+      <ImageTitle>
+        <h4>{product.name}</h4>
         <LikeWrapper>
           <AiFillHeart size="18" color="#362579" />
           <p>32 Likes</p>
         </LikeWrapper>
-        <DescriptionWrapper>
-          <p>{product.description}</p>
-        </DescriptionWrapper>
-        <CommentWrapper>
-          <p>View 13 comments</p>
-        </CommentWrapper>
-      </ProductDescription>
+        <button onClick={() => deleteFavoriteProduct(product.id)}>
+          Remove
+        </button>
+      </ImageTitle>
     </Card>
   );
-};
+}
 
 export default Favorite;
