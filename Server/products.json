@@ -1,9 +1,9 @@
 [
   {
     "id": "1",
-    "name": "Jordan Zion 1",
-    "image": "https://images.footlocker.com/is/image/EBFL2/C4208601_a1?wid=500&hei=500&fmt=png-alpha",
-    "description": "Be a dominant force on the floor with the dynamic Jordan Zion 1. Inspired by Zion Williamson’s signature details, its lightweight Air Strobel footbed is sewn onto the upper for a super-cushiony ride. Repping his duality of humility and superhuman ability, these sneakers let you bring strength and support to your skills as you lay waste to the competition. Enabling you to move carefree with exceptional side-to-side stability, the Jordan Zion 1 adds a classic Jumpman edge to your court-ready rotation!",
+    "name": "Nike Therma Full Zip Hoodie",
+    "image": "https://images.footlocker.com/is/image/EBFL2/U6231100_a1?wid=500&hei=500&fmt=png-alpha",
+    "description": "Enjoy soft comfort all day long with the Nike Men’s Therma Full-Zip Hoodie, a rugged piece of cool-weather clothing with a non-rugged feel. Getting ready for a game or a relaxing night with friends? The Therma keeps warmth next to your skin while wicking away moisture.",
     "isLiked": false,
     "numberOfLikes": 24,
     "numberOfComments": 6,
@@ -11,9 +11,9 @@
   },
   {
     "id": "2",
-    "name": "Jordan Why Not Zero.4",
-    "image": "https://images.footlocker.com/is/image/EBFL2/Q4230102_a1?wid=500&hei=500&fmt=png-alpha",
-    "description": "Why not slip into one of the most comfortable and power-packed kicks? The Jordan Why Not Zero.4 sneakers are inspired by the superstar Russell Westbrook, perfectly capturing his skills and style on the court. Power-packed and performance-driven, these silhouettes support your feet as you perfect your crossovers, layups, and landings with ease. Get maximum responsiveness on and off the court as you step out in style in these durable and breathable super-kicks.",
+    "name": "Nike Kyrie Low",
+    "image": "https://images.footlocker.com/is/image/EBFL2/W3985401_a1?wid=500&hei=500&fmt=png-alpha",
+    "description": "Why not slip into one of the most comfortable and power-packed kicks? Power-packed and performance-driven, these silhouettes support your feet as you perfect your crossovers, layups, and landings with ease.",
     "isLiked": false,
     "numberOfLikes": 32,
     "numberOfComments": 2,
@@ -31,7 +31,7 @@
   },
   {
     "id": "4",
-    "name": "The North Face Shelbe Raschel Reversible Pullover",
+    "name": "The North Face Shelbe Pullover",
     "image": "https://images.footlocker.com/is/image/EBFL2/A4R7D11P_om1?wid=500&hei=500&fmt=png-alpha",
     "description": "Double up on style with The North Face’s Shelbe Raschel Reversible Pullover.",
     "isLiked": false,
@@ -51,8 +51,8 @@
   },
   {
     "id": "6",
-    "name": "Nike Hoops Elite Pro Backpack",
-    "image": "https://images.footlocker.com/is/image/EBFL2/Q7282100_a1?wid=500&hei=500&fmt=png-alpha",
+    "name": "Jordan Essentials Pullover Hoodie",
+    "image": "https://images.footlocker.com/is/image/EBFL2/G715G048_a1?wid=500&hei=500&fmt=png-alpha",
     "description": "Calling athletes, students, commuters, and gym enthusiasts alike: the Nike Hoops Elite Pro Backpack has space for your electronics, wet and dry gear, a water bottle, and more. Practice, hit the gym, play a pick-up game and more with ease.",
     "isLiked": false,
     "numberOfLikes": 19,

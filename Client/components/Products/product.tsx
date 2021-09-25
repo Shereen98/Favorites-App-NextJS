@@ -1,5 +1,13 @@
 import styled from "styled-components";
-import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { AiFillHeart } from "react-icons/ai";
+import {
+  addToFavorite,
+  deleteFavorite,
+} from "../../services/favoriteProductService";
+import { toast, ToastContainer } from "react-nextjs-toast";
+import { useRouter } from "next/router";
+import { Component } from "react";
+import FavoriteButton from "../Favorites/favorite-button";
 
 const Card = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -57,30 +65,60 @@ const CommentWrapper = styled.div`
   }
 `;
 
-const Product = ({ product }) => {
+const FavButton = styled.button`
+  border-radius: 50%;
+  height: 43px;
+  width: 43px;
+  line-height: 0px;
+  background: #332e2e21;
+  border-width: 0;
+`;
+
+function Product({ product }) {
+  const router = useRouter();
+
+  const refreshData = () => {
+    router.replace(
+      {
+        pathname: router.asPath,
+      },
+      undefined,
+      { scroll: false }
+    );
+  };
+
+  async function submitFavorite(id, isLiked) {
+    const data = isLiked ? await deleteFavorite(id) : await addToFavorite(id);
+    refreshData();
+  }
+
   return (
     <Card key={product.id}>
       <ImageContainer>
         <img src={product.image} alt="Picture of the author" />
-        <ImageTitle>
+        <ImageTitle key={product.id}>
           <h4>{product.name}</h4>
-          <AiOutlineHeart size="30" color="#FF6347" />
+          <FavButton
+            onClick={() => submitFavorite(product.id, product.isLiked)}
+          >
+            <FavoriteButton state={product.isLiked} />
+          </FavButton>
         </ImageTitle>
       </ImageContainer>
       <ProductDescription>
         <LikeWrapper>
           <AiFillHeart size="18" color="#362579" />
-          <p>32 Likes</p>
+          <p>{product.numberOfLikes} Likes</p>
         </LikeWrapper>
         <DescriptionWrapper>
           <p>{product.description}</p>
         </DescriptionWrapper>
         <CommentWrapper>
-          <p>View 13 comments</p>
+          <p>View {product.numberOfComments} comments</p>
         </CommentWrapper>
       </ProductDescription>
     </Card>
   );
-};
+}
 
 export default Product;

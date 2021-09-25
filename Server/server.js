@@ -20,6 +20,8 @@ const favoriteProducts = {
   favProducts: [],
 };
 
+let index = 0;
+
 //Get products
 router.get("/products", (req, res) => {
   return res.send(product);
@@ -44,23 +46,17 @@ router.get("/products/:id", (req, res) => {
 router.post("/favorites/:id", (req, res) => {
   const productId = req.params.id;
 
-  const productIndex = product.findIndex(
-    (product) => product.id === req.params.id
-  );
-
-  if (productIndex === -1) {
-    return res.status(404).json({ error: "Product does not exist!" });
-  }
-
-  const favoriteProduct = product[productIndex];
+  const favoriteProduct = getProductFromId(product, productId);
+  favoriteProduct.isLiked = true;
+  favoriteProduct.numberOfLikes += 1;
 
   const productObject = {
     id: favoriteProduct.id,
     name: favoriteProduct.name,
     image: favoriteProduct.image,
     description: favoriteProduct.description,
-    isLiked: true,
-    numberOfLikes: favoriteProduct.numberOfLikes + 1,
+    isLiked: favoriteProduct.isLiked,
+    numberOfLikes: favoriteProduct.numberOfLikes,
   };
   favoriteProducts.favProducts.push(productObject);
   console.log(favoriteProducts);
@@ -75,19 +71,25 @@ router.get("/favorites", (req, res) => {
 //Delete favorite product
 router.delete("/favorites/:id", (req, res) => {
   const productId = req.params.id;
+  const savedProduct = getProductFromId(product, productId);
+  const favProduct = getProductFromId(favoriteProducts.favProducts, productId);
 
-  const productIndex = favoriteProductList.findIndex(
-    (favProduct) => favProduct.id === req.params.id
-  );
-
-  if (productIndex === -1) {
-    return res.status(404).json({ error: "Product does not exist" });
-  }
-
-  favoriteProductList.splice(productIndex, 1);
+  savedProduct.isLiked = false;
+  savedProduct.numberOfLikes -= 1;
+  favoriteProducts.favProducts.splice(index, 1);
 
   res.sendStatus(204);
 });
+
+function getProductFromId(productList, id) {
+  index = productList.findIndex((favProduct) => favProduct.id === id);
+
+  if (index === -1) {
+    return res.status(404).json({ error: "Product does not exist" });
+  }
+
+  return productList[index];
+}
 
 app.use(apiPrefix, router);
 

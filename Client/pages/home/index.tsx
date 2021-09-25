@@ -4,7 +4,7 @@ import styles from "../../styles/Home.module.css";
 import Product from "../../components/Products/product";
 import { getAllProducts } from "../../services/productService";
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const data = await getAllProducts();
   return {
     props: { products: data },

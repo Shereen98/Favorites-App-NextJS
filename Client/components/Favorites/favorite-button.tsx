@@ -1,7 +1,8 @@
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
-const FavoriteButton = () => {
-  return <AiOutlineHeart size="30" color="#FF6347" />;
+const FavoriteButton = ({ state }) => {
+  const Heart = state === false ? AiOutlineHeart : AiFillHeart;
+  return <Heart size="30" color="#d81b60" />;
 };
 
 export default FavoriteButton;

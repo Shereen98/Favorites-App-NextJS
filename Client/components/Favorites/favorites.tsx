@@ -64,7 +64,6 @@ const Favorite = ({ product }) => {
         <img src={product.image} alt="Picture of the author" />
         <ImageTitle>
           <h4>{product.name}</h4>
-          <AiOutlineHeart size="30" color="#FF6347" />
         </ImageTitle>
       </ImageContainer>
       <ProductDescription>

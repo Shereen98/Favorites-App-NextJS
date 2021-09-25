@@ -13,7 +13,7 @@ const Main = styled.div`
   flex-direction: column;
 `;
 
-const Layout = ({ children }) => {
+function Layout({ children }) {
   return (
     <Main>
       <Head>
@@ -26,6 +26,6 @@ const Layout = ({ children }) => {
       <MobileToolBar />
     </Main>
   );
-};
+}
 
 export default Layout;
