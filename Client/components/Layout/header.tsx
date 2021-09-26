@@ -32,10 +32,10 @@ const Logo = styled.div`
 
   @media (min-width: 576px) {
     width: 15%;
-    padding: 15px 19px;
+    padding: 15px 29px;
 
     img {
-      width: 85%;
+      width: 90%;
     }
   }
 `;
@@ -43,23 +43,23 @@ const Logo = styled.div`
 const Search = styled.div`
   display: inline-block;
   padding-right: 14px;
-  margin-top: 5px;
   width: 55%;
 
   input[type="text"] {
     border: 0;
     border-radius: 5px;
     float: right;
-    width: 80%;
+    width: 100%;
     padding: 5px 6px;
   }
 
   @media (min-width: 576px) {
     width: 65%;
     input[type="text"] {
-      padding: 10px 10px;
+      padding: 10px 15px;
       float: left;
       width: 100%;
+      font-size: 15px;
     }
   }
 `;
@@ -69,7 +69,7 @@ const PageLinks = styled.div`
   display: flex;
   padding: 15px 19px;
   width: 20%;
-  font-size: 16px;
+  font-size: 15px;
 
   @media (max-width: 576px) {
     display: none;
@@ -92,7 +92,11 @@ export default function Header() {
         <img src="logo/logo_new.png" alt="Logo" />
       </Logo>
       <Search>
-        <input type="text" name="searchbar" placeholder="Search..." />
+        <input
+          type="text"
+          name="searchbar"
+          placeholder="What are you looking for?"
+        />
       </Search>
       <PageLinks>
         <div className="navBtn">

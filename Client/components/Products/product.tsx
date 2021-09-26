@@ -8,12 +8,6 @@ import { useRouter } from "next/router";
 import FavoriteButton from "../Favorites/favorite-button";
 import { ProductInterface } from "../../interface/ProductInterface";
 
-const MainLayout = styled.div`
-  @media (min-width: 576px) {
-    display: flex;
-  }
-`;
-
 const Card = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -21,12 +15,16 @@ const Card = styled.div`
   padding: 10px 10px;
   position: relative;
   margin-bottom: 18px;
+  border-radius: 10px;
   img {
     width: 100%;
   }
 
   @media (min-width: 576px) {
-    width: 20%;
+    width: calc(25% - 16px);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 8px;
   }
 `;
 
@@ -104,35 +102,33 @@ function Product({ product }: ProductInterface) {
   }
 
   return (
-    <MainLayout key={product.id}>
-      <Card>
-        <ImageContainer>
-          <img src={product.image} alt="Picture of the author" />
-          <ImageTitle key={product.id}>
-            <h4>{product.name}</h4>
-            <FavButton
-              onClick={() =>
-                submitFavorite(product.id, product.isLiked as booleajn)
-              }
-            >
-              <FavoriteButton state={product.isLiked} />
-            </FavButton>
-          </ImageTitle>
-        </ImageContainer>
-        <ProductDescription>
-          <LikeWrapper>
-            <AiFillHeart size="18" color="#362579" />
-            <p>{product.numberOfLikes} Likes</p>
-          </LikeWrapper>
-          <DescriptionWrapper>
-            <p>{product.description}</p>
-          </DescriptionWrapper>
-          <CommentWrapper>
-            <p>View {product.numberOfComments} comments</p>
-          </CommentWrapper>
-        </ProductDescription>
-      </Card>
-    </MainLayout>
+    <Card key={product.id}>
+      <ImageContainer>
+        <img src={product.image} alt="Picture of the author" />
+        <ImageTitle key={product.id}>
+          <h4>{product.name}</h4>
+          <FavButton
+            onClick={() =>
+              submitFavorite(product.id, product.isLiked as booleajn)
+            }
+          >
+            <FavoriteButton state={product.isLiked} />
+          </FavButton>
+        </ImageTitle>
+      </ImageContainer>
+      <ProductDescription>
+        <LikeWrapper>
+          <AiFillHeart size="18" color="#362579" />
+          <p>{product.numberOfLikes} Likes</p>
+        </LikeWrapper>
+        <DescriptionWrapper>
+          <p>{product.description}</p>
+        </DescriptionWrapper>
+        <CommentWrapper>
+          <p>View {product.numberOfComments} comments</p>
+        </CommentWrapper>
+      </ProductDescription>
+    </Card>
   );
 }
 
