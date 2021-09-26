@@ -7,6 +7,7 @@ const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
+//server configuration
 const apiPaths = {
   "/api": {
     target: "http://localhost:3080",
