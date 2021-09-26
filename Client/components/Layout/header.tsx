@@ -1,22 +1,108 @@
 import Link from "next/link";
 import styled from "styled-components";
+import Image from "next/image";
+import logo from "../../public/logo/logo.png";
 
 const HeaderWrapper = styled.div`
   height: 60px;
   position: fixed;
   z-index: 3;
-  background-color: black;
   width: 100%;
+  display: flex;
+  padding: 5px 0px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0b312e;
+
+  @media (min-width: 576px) {
+    height: 75px;
+  }
+`;
+
+const Logo = styled.div`
+  text-align: left;
+  margin-top: 5px;
+  float: left;
+  padding: 5px 9px;
+  width: 40%;
+
+  img {
+    width: 100%;
+  }
+
+  @media (min-width: 576px) {
+    width: 15%;
+    padding: 15px 19px;
+
+    img {
+      width: 85%;
+    }
+  }
+`;
+
+const Search = styled.div`
+  display: inline-block;
+  padding-right: 14px;
+  margin-top: 5px;
+  width: 55%;
+
+  input[type="text"] {
+    border: 0;
+    border-radius: 5px;
+    float: right;
+    width: 80%;
+    padding: 5px 6px;
+  }
+
+  @media (min-width: 576px) {
+    width: 65%;
+    input[type="text"] {
+      padding: 10px 10px;
+      float: left;
+      width: 100%;
+    }
+  }
+`;
+
+const PageLinks = styled.div`
   color: white;
-  text-align: center;
+  display: flex;
+  padding: 15px 19px;
+  width: 20%;
+  font-size: 16px;
+
+  @media (max-width: 576px) {
+    display: none;
+  }
+
+  .navBtn {
+    text-align: center;
+    width: 100%;
+  }
+
+  .navBtn :hover {
+    color: #ffeb3b;
+  }
 `;
 
 export default function Header() {
   return (
     <HeaderWrapper>
-      <div>
-        <h1>Header</h1>
-      </div>
+      <Logo>
+        <img src="logo/logo_new.png" alt="Logo" />
+      </Logo>
+      <Search>
+        <input type="text" name="searchbar" placeholder="Search..." />
+      </Search>
+      <PageLinks>
+        <div className="navBtn">
+          <Link href="/home">Home</Link>
+        </div>
+        <span>|</span>
+        <div className="navBtn">
+          <Link href="/favorites">Favorites</Link>
+        </div>
+      </PageLinks>
     </HeaderWrapper>
   );
 }
