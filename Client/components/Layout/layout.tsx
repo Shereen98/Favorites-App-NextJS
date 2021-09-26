@@ -2,6 +2,7 @@ import Header from "./header";
 import MobileToolBar from "./mobile-tool-bar";
 import styled from "styled-components";
 import Head from "next/head";
+import Footer from "./footer";
 
 const Content = styled.div`
   margin: 60px 0px;
@@ -24,6 +25,7 @@ function Layout({ children }: any) {
       <Header />
       <Content>{children}</Content>
       <MobileToolBar />
+      <Footer />
     </Main>
   );
 }

@@ -101,7 +101,7 @@ function Favorite({ product }: ProductInterface) {
     refreshData();
   }
 
-  return (
+  return product.id != "" ? (
     <Card>
       <ImageContainer>
         <img src={product.image} alt="Picture of the author" />
@@ -119,6 +119,8 @@ function Favorite({ product }: ProductInterface) {
         </CardFooter>
       </ImageTitle>
     </Card>
+  ) : (
+    <div>No item</div>
   );
 }
 

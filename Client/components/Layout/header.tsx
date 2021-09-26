@@ -67,7 +67,6 @@ const Search = styled.div`
 const PageLinks = styled.div`
   color: white;
   display: flex;
-  padding: 15px 19px;
   width: 20%;
   font-size: 15px;
 

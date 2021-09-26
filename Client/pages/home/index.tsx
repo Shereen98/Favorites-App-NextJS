@@ -16,7 +16,9 @@ const Products = ({ products }: any) => {
   return (
     <div className={styles.container}>
       {products &&
-        products.map((product: any) => <Product product={product} />)}
+        products.map((product: any) => (
+          <Product key={product.id} product={product} />
+        ))}
     </div>
   );
 };

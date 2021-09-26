@@ -39,7 +39,7 @@ const ImageTitle = styled.div`
   right: 0;
   background: #c0c0c094;
   cursor: pointer;
-  padding: 5px;
+  padding: 5px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
