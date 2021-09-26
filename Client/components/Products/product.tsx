@@ -25,6 +25,7 @@ const Card = styled.div`
     display: flex;
     flex-wrap: wrap;
     margin: 8px;
+    margin-top: 30px;
   }
 `;
 

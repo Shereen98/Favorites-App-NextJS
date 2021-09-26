@@ -3,7 +3,6 @@ import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 import Product from "../../components/Products/product";
 import { getAllProducts } from "../../services/productService";
-import { ProductInterface } from "../../interface/ProductInterface";
 
 export const getServerSideProps = async () => {
   const data = await getAllProducts();

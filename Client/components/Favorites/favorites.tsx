@@ -21,6 +21,7 @@ const Card = styled.div`
     display: flex;
     flex-wrap: wrap;
     margin: 8px;
+    margin-top: 30px;
   }
 `;
 
@@ -40,21 +41,18 @@ const ImageTitle = styled.div`
   display: flex;
   flex-direction: column;
   width: 65%;
+  padding-left: 12px;
 
   h3 {
     margin: 0;
   }
 
   @media (min-width: 576px) {
+    padding-left: 15px;
     h3 {
       font-size: 150%;
     }
   }
-`;
-
-const ProductDescription = styled.div`
-  top: 8px;
-  bottom: 8px;
 `;
 
 const LikeWrapper = styled.div`
@@ -81,6 +79,12 @@ const CardFooter = styled.div`
     color: white;
     font-weight: bold;
   }
+
+  @media (min-width: 576px) {
+    button {
+      font-size: 90%;
+    }
+  }
 `;
 
 function Favorite({ product }: ProductInterface) {
@@ -101,7 +105,7 @@ function Favorite({ product }: ProductInterface) {
     refreshData();
   }
 
-  return product.id != "" ? (
+  return (
     <Card>
       <ImageContainer>
         <img src={product.image} alt="Picture of the author" />
@@ -119,8 +123,6 @@ function Favorite({ product }: ProductInterface) {
         </CardFooter>
       </ImageTitle>
     </Card>
-  ) : (
-    <div>No item</div>
   );
 }
 

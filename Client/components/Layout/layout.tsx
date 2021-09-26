@@ -7,6 +7,7 @@ import Footer from "./footer";
 const Content = styled.div`
   margin: 60px 0px;
   padding: 15px 15px;
+  min-height: 76vh;
 `;
 
 const Main = styled.div`

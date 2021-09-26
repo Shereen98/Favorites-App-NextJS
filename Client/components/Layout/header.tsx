@@ -1,7 +1,5 @@
 import Link from "next/link";
 import styled from "styled-components";
-import Image from "next/image";
-import logo from "../../public/logo/logo.png";
 
 const HeaderWrapper = styled.div`
   height: 60px;
@@ -50,7 +48,7 @@ const Search = styled.div`
     border-radius: 5px;
     float: right;
     width: 100%;
-    padding: 5px 6px;
+    padding: 6px;
   }
 
   @media (min-width: 576px) {
