@@ -15,6 +15,13 @@ const Card = styled.div`
   img {
     width: 100%;
   }
+
+  @media (min-width: 576px) {
+    width: calc(25% - 16px);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 8px;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -29,7 +36,20 @@ const ImageTitle = styled.div`
   right: 0;
   cursor: pointer;
   padding: 0px 5px;
-  width: 75%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+
+  h3 {
+    margin: 0;
+  }
+
+  @media (min-width: 576px) {
+    h3 {
+      font-size: 150%;
+    }
+  }
 `;
 
 const ProductDescription = styled.div`
@@ -41,15 +61,25 @@ const LikeWrapper = styled.div`
   top: 0;
   display: flex;
   align-items: center;
+
   p {
     color: #362579;
     padding: 0px 5px;
   }
 `;
 
-const DescriptionWrapper = styled.div`
-  p {
-    text-align: justify;
+const CardFooter = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    height: 30px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #f44336;
+    color: white;
+    font-weight: bold;
   }
 `;
 
@@ -72,19 +102,21 @@ function Favorite({ product }: ProductInterface) {
   }
 
   return (
-    <Card key={product.id}>
+    <Card>
       <ImageContainer>
         <img src={product.image} alt="Picture of the author" />
       </ImageContainer>
       <ImageTitle>
-        <h4>{product.name}</h4>
-        <LikeWrapper>
-          <AiFillHeart size="18" color="#362579" />
-          <p>32 Likes</p>
-        </LikeWrapper>
-        <button onClick={() => deleteFavoriteProduct(product.id)}>
-          Remove
-        </button>
+        <h3>{product.name}</h3>
+        <CardFooter>
+          <LikeWrapper>
+            <AiFillHeart size="18" color="#362579" />
+            <p>32 Likes</p>
+          </LikeWrapper>
+          <button onClick={() => deleteFavoriteProduct(product.id)}>
+            Remove
+          </button>
+        </CardFooter>
       </ImageTitle>
     </Card>
   );

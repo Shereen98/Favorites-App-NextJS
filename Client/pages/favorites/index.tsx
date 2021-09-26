@@ -14,7 +14,9 @@ const Favorites = ({ products }: any) => {
   return (
     <div className={styles.container}>
       {products &&
-        products.map((product: any) => <Favorite product={product} />)}
+        products.map((product: any) => (
+          <Favorite key={product.id} product={product} />
+        ))}
     </div>
   );
 };

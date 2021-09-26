@@ -102,14 +102,14 @@ function Product({ product }: ProductInterface) {
   }
 
   return (
-    <Card key={product.id}>
+    <Card>
       <ImageContainer>
         <img src={product.image} alt="Picture of the author" />
         <ImageTitle key={product.id}>
           <h4>{product.name}</h4>
           <FavButton
             onClick={() =>
-              submitFavorite(product.id, product.isLiked as booleajn)
+              submitFavorite(product.id, product.isLiked as boolean)
             }
           >
             <FavoriteButton state={product.isLiked} />
