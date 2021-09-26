@@ -4,6 +4,7 @@ import styles from "../../styles/Home.module.css";
 import Product from "../../components/Products/product";
 import { getAllProducts } from "../../services/productService";
 
+//Fetch products and pass to page component as props
 export const getServerSideProps = async () => {
   const data = await getAllProducts();
   return {

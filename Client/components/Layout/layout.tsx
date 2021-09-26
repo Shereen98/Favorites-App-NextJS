@@ -15,6 +15,7 @@ const Main = styled.div`
   flex-direction: column;
 `;
 
+//Layout used for all the pages
 function Layout({ children }: any) {
   return (
     <Main>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { AiFillHeart } from "react-icons/ai";
 import { ProductInterface } from "../../interface/ProductInterface";
 import { useRouter } from "next/router";
 import { deleteFavorite } from "../../services/favoriteProductService";
@@ -90,6 +90,7 @@ const CardFooter = styled.div`
 function Favorite({ product }: ProductInterface) {
   const router = useRouter();
 
+  //Refresh page props
   const refreshData = () => {
     router.replace(
       {

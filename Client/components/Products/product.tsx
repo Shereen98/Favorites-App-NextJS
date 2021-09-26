@@ -84,9 +84,9 @@ const FavButton = styled.button`
 `;
 
 function Product({ product }: ProductInterface) {
-  //
   const router = useRouter();
 
+  //Refresh page props
   const refreshData = () => {
     router.replace(
       {
@@ -97,6 +97,7 @@ function Product({ product }: ProductInterface) {
     );
   };
 
+  //Delete or add to favorites based isLiked property
   async function submitFavorite(id: string, isLiked: boolean) {
     const data = isLiked ? await deleteFavorite(id) : await addToFavorite(id);
     refreshData();
