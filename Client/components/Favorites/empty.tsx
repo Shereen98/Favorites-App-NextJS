@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { useRouter } from "next/router";
 
 const EmptyWrapper = styled.div`
   position: relative;
@@ -10,10 +9,11 @@ const EmptyWrapper = styled.div`
   margin-left: 2%;
   font-family:dancing script;
   font-weight:bold;
-  color:#757575c7;
+  color:#0b312e;
 
   @media (min-width: 576px) {
-    margin-left:35%;
+    width:40%;
+    margin-left:30%;
 
     h3{
       font-size:200%;
@@ -23,7 +23,7 @@ const EmptyWrapper = styled.div`
 function Empty() {
   return (
     <EmptyWrapper>
-      <img src="empty/empty_new.png" alt="Empty" />
+      <img src="empty/empty.png" alt="Empty" />
       <h3>Favorite list is Empty!</h3>
     </EmptyWrapper>
   );

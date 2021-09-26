@@ -12,7 +12,6 @@ export const getStaticProps = async () => {
 };
 
 const Favorites = ({ products }: any) => {
-  console.log(products);
   return (
     <div className={styles.container}>
       {products.length == 0 ? (
