@@ -23,7 +23,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
     
 ## Configuring
 
-The current server is running on [http://localhost:3080](http://localhost:3080). If you want to change the server port go to `Client/server.js` and change the configured port as below,
+The server will run on [http://localhost:3080](http://localhost:3080). If you want to change the server port go to `Client/server.js` and change the configured port as below,
 
     const apiPaths = {
       "/api": {
